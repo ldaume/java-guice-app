@@ -5,8 +5,9 @@ import org.slf4j.LoggerFactory;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.time.Duration;
+import java.util.Optional;
 
-import humanize.Humanize;
+import static humanize.Humanize.nanoTime;
 
 
 public class JvmUtil {
@@ -99,23 +100,21 @@ public class JvmUtil {
                 Thread thread = new Thread(() -> shutdownFinal(time), "JvmTermination-thread");
                 thread.setDaemon(false);
                 thread.start();
-            }
-            else {
+            } else {
                 shutdownFinal(time);
             }
         }
 
 
         protected void shutdownFinal(Duration time) {
-            if (time != null) {
-                LoggerFactory.getLogger(JvmUtil.class)
-                             .info("The JavaVM will exit in {"
-                                   + Humanize.nanoTime(time.toNanos())
-                                   + "}, return code will be {"
-                                   + builderReturnCode
-                                   + "}");
-                sleep(time);
-            }
+            final Duration duration = Optional.ofNullable(time).orElse(Duration.ZERO);
+            LoggerFactory.getLogger(JvmUtil.class)
+                         .info("The JavaVM will exit in {"
+                               + nanoTime(duration.toNanos())
+                               + "}, return code will be {"
+                               + builderReturnCode
+                               + "}");
+            sleep(duration);
             System.exit(builderReturnCode);
         }
     }

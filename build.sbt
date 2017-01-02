@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).
   enablePlugins(JavaAppPackaging, JDKPackagerPlugin).
   settings(
     organization := "software.reinvent",
-    scalaVersion := "2.12.0",
+    scalaVersion := "2.12.1",
     version := "0.1.0-SNAPSHOT",
     jdkPackagerType := "all",
     jdkPackagerToolkit := JavaFXToolkit,
@@ -56,7 +56,7 @@ libraryDependencies ++= Seq(
 
 
   // CSV
-  "com.univocity" % "univocity-parsers" % "2.2.3",
+  "com.univocity" % "univocity-parsers" % "2.3.0",
 
   // DB
   // MySQL
@@ -78,23 +78,23 @@ libraryDependencies ++= Seq(
   "com.google.inject" % "guice" % "4.1.0",
   "org.zeroturnaround" % "zt-zip" % "1.10",
   "org.unbescape" % "unbescape" % "1.1.4.RELEASE",
-  "io.reactivex" % "rxjava" % "1.2.2",
+  "io.reactivex.rxjava2" % "rxjava" % "2.0.3",
   "com.github.rholder" % "guava-retrying" % "2.0.0" exclude("com.google.guava", "guava"),
   // READABILITY
   "com.github.mfornos" % "humanize-slim" % "1.2.2" exclude("com.google.guava", "guava"),
 
 
   // LOGGING
-  "ch.qos.logback" % "logback-classic" % "1.1.7",
-  "ch.qos.logback" % "logback-core" % "1.1.7",
+  "ch.qos.logback" % "logback-classic" % "1.1.8",
+  "ch.qos.logback" % "logback-core" % "1.1.8",
 
 
   // TEST
-  "org.assertj" % "assertj-core" % "3.6.0" % "test",
+  "org.assertj" % "assertj-core" % "3.6.1" % "test",
   "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
   "com.novocode" % "junit-interface" % "0.11" % "test->default",
   "org.jukito" % "jukito" % "1.4.1" % "test",
-  "info.debatty" % "java-string-similarity" % "0.19" % "test",
+  "info.debatty" % "java-string-similarity" % "0.21" % "test",
   "de.flapdoodle.embed" % "de.flapdoodle.embed.memcached" % "1.06.4" % "test",
   "com.wix" % "wix-embedded-mysql" % "2.1.1" % "test",
   "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.5" % "test"

@@ -1,9 +1,7 @@
-package software.reinvent.guice.application.bus;
+package software.reinvent.guice.application.utils.bus;
 
-import rx.Observable;
-import rx.subjects.PublishSubject;
-import rx.subjects.SerializedSubject;
-import rx.subjects.Subject;
+import io.reactivex.Observable;
+import io.reactivex.subjects.PublishSubject;
 
 /**
  * Eventbus implementation with RxJava.
@@ -12,13 +10,17 @@ import rx.subjects.Subject;
  */
 public class RxBus {
 
-    private final Subject<Object, Object> bus = new SerializedSubject<>(PublishSubject.create());
+    private final PublishSubject<Object> bus = PublishSubject.create();
 
-    public void send(Object event) {
+    public void send(final Object event) {
         bus.onNext(event);
     }
 
-    public Observable<Object> toObserverable() {
+    public Observable<Object> toObservable() {
         return bus;
+    }
+
+    public boolean hasObservers() {
+        return bus.hasObservers();
     }
 }
