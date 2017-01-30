@@ -41,9 +41,10 @@ lazy val root = (project in file(".")).
         |   echo "Will download jre";
         |   INSTALL_DIR="$(getent passwd $USER | awk -F ':' '{print $6}')/java"
         |   mkdir -p ${INSTALL_DIR}
-        |   wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u102-b14/jre-8u102-linux-x64.tar.gz -O ${INSTALL_DIR}/jre.tar.gz;
+        |   wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u121-b13/jre-8u121-linux-x64.tar.gz -O ${INSTALL_DIR}/jre.tar.gz;
         |   tar xfvz ${INSTALL_DIR}/jre.tar.gz -C ${INSTALL_DIR};
-        |   JAVA_HOME=${INSTALL_DIR}/jre1.8.0_102/;
+        |   ln -s ${INSTALL_DIR}/jre1.8.0_121 ${INSTALL_DIR}/latest_jre
+        |   JAVA_HOME=${INSTALL_DIR}/latest_jre/;
         |   export JAVA_HOME=$JAVA_HOME;
         |   grep -q -F "export JAVA_HOME=$JAVA_HOME" $HOME/.profile || echo "export JAVA_HOME=$JAVA_HOME" >> $HOME/.profile;
         |fi""".stripMargin
@@ -52,7 +53,7 @@ lazy val root = (project in file(".")).
 
 
 libraryDependencies ++= Seq(
-  "com.beust" % "jcommander" % "1.58",
+  "com.beust" % "jcommander" % "1.60",
 
 
   // CSV
@@ -71,33 +72,33 @@ libraryDependencies ++= Seq(
 
   // Commons
   "org.apache.commons" % "commons-lang3" % "3.5",
-  "com.google.guava" % "guava" % "20.0",
+  "com.google.guava" % "guava" % "21.0",
   "org.apache.commons" % "commons-collections4" % "4.1",
   "commons-io" % "commons-io" % "2.5",
   "com.typesafe" % "config" % "1.3.1",
   "com.google.inject" % "guice" % "4.1.0",
   "org.zeroturnaround" % "zt-zip" % "1.10",
   "org.unbescape" % "unbescape" % "1.1.4.RELEASE",
-  "io.reactivex.rxjava2" % "rxjava" % "2.0.3",
+  "io.reactivex.rxjava2" % "rxjava" % "2.0.5",
   "com.github.rholder" % "guava-retrying" % "2.0.0" exclude("com.google.guava", "guava"),
   // READABILITY
   "com.github.mfornos" % "humanize-slim" % "1.2.2" exclude("com.google.guava", "guava"),
 
 
   // LOGGING
-  "ch.qos.logback" % "logback-classic" % "1.1.8",
-  "ch.qos.logback" % "logback-core" % "1.1.8",
+  "ch.qos.logback" % "logback-classic" % "1.1.9",
+  "ch.qos.logback" % "logback-core" % "1.1.9",
 
 
   // TEST
-  "org.assertj" % "assertj-core" % "3.6.1" % "test",
+  "org.assertj" % "assertj-core" % "3.6.6" % "test",
   "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
   "com.novocode" % "junit-interface" % "0.11" % "test->default",
-  "org.jukito" % "jukito" % "1.4.1" % "test",
-  "info.debatty" % "java-string-similarity" % "0.21" % "test",
+  "org.jukito" % "jukito" % "1.5" % "test",
+  "info.debatty" % "java-string-similarity" % "0.22" % "test",
   "de.flapdoodle.embed" % "de.flapdoodle.embed.memcached" % "1.06.4" % "test",
-  "com.wix" % "wix-embedded-mysql" % "2.1.1" % "test",
-  "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.5" % "test"
+  "com.wix" % "wix-embedded-mysql" % "2.1.4" % "test",
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.6" % "test"
 
 )
 
@@ -105,6 +106,8 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 //testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
 
 resolvers += Resolver.mavenLocal
+
+dependencyUpdatesFailBuild := true
 
 //publishMavenStyle := true
 
