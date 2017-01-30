@@ -53,8 +53,9 @@ lazy val root = (project in file(".")).
 
 
 libraryDependencies ++= Seq(
+  "software.reinvent" % "commons" % "0.1.0"
+  
   "com.beust" % "jcommander" % "1.60",
-
 
   // CSV
   "com.univocity" % "univocity-parsers" % "2.3.0",
@@ -102,10 +103,14 @@ libraryDependencies ++= Seq(
 
 )
 
+resolvers ++= Seq(
+  Resolver.mavenLocal,
+  "ReInvent Software OSS" at "https://maven.reinvent-software.de/nexus/content/groups/public"
+)
+
 scalacOptions in Test ++= Seq("-Yrangepos")
 //testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
 
-resolvers += Resolver.mavenLocal
 
 dependencyUpdatesFailBuild := true
 
