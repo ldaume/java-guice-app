@@ -15,15 +15,14 @@ import org.mockito.ArgumentCaptor;
 import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Logger;
-import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.Appender;
 import software.reinvent.guice.application.ConfigTestUtils;
 import software.reinvent.guice.application.module.AppModule;
+import software.reinvent.log.InjectLogger;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 /**
@@ -34,27 +33,31 @@ import static org.mockito.Mockito.verify;
 public class GuiceApplicationTest {
 
     @Inject
-    Application application;
+    private Application application;
 
     @Inject
     private Config config;
 
-    private Logger log = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+    @InjectLogger
+    private org.slf4j.Logger injectedLogger;
 
-    private Appender<ILoggingEvent> mockAppender;
-    private ArgumentCaptor<LoggingEvent> captorLoggingEvent;
+    private Logger rootLogger;
+
+    @Inject
+    private Appender mockedAppender;
+
+
+    private ArgumentCaptor<Appender> argumentCaptor = ArgumentCaptor.forClass(Appender.class);
 
     @Before
-    public void setUp(Appender<ILoggingEvent> appender, ArgumentCaptor<LoggingEvent> captor) throws Exception {
-        mockAppender = appender;
-        this.captorLoggingEvent = captor;
-
-        log.addAppender(mockAppender);
+    public void setUp() throws Exception {
+        rootLogger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+        rootLogger.addAppender(mockedAppender);
     }
 
     @After
     public void tearDown() throws Exception {
-        log.detachAppender(mockAppender);
+        rootLogger.detachAppender(mockedAppender);
     }
 
     @Test
@@ -70,9 +73,8 @@ public class GuiceApplicationTest {
 
         application.start();
 
-        verify(mockAppender, times(1)).doAppend(captorLoggingEvent.capture());
-        final LoggingEvent loggingEvent = captorLoggingEvent.getValue();
-        assertThat(loggingEvent.getFormattedMessage()).isEqualTo("Hello Test.");
+        verify(mockedAppender).doAppend(argumentCaptor.capture());
+        assertThat(((LoggingEvent) argumentCaptor.getAllValues().get(0)).getFormattedMessage()).isEqualTo("Hello Test.");
 
         addConfigEntry(AppConfigConsts.HELLO_WORLD_NAME, backedUppedConfigValue);
     }

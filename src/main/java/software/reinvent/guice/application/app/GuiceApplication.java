@@ -6,8 +6,9 @@ import com.typesafe.config.Config;
 
 import org.slf4j.Logger;
 
-import software.reinvent.guice.application.utils.InjectLogger;
-import software.reinvent.guice.application.utils.JvmUtil;
+import software.reinvent.jvm.JvmUtil;
+import software.reinvent.log.InjectLogger;
+
 
 /**
  * @author leonard Daume

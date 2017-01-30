@@ -4,7 +4,8 @@ import com.google.inject.Provider;
 
 import com.typesafe.config.Config;
 
-import software.reinvent.guice.application.utils.ConfigLoader;
+import software.reinvent.commons.config.ConfigLoader;
+
 
 /**
  * @author leonard Daume
