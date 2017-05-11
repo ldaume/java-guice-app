@@ -51,7 +51,7 @@ lazy val root = (project in file(".")).
 
 
 libraryDependencies ++= Seq(
-  "software.reinvent" % "commons" % "0.1.1",
+  "software.reinvent" % "commons" % "0.3.2",
   
   "com.beust" % "jcommander" % "1.60",
 
