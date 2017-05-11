@@ -33,20 +33,18 @@ lazy val root = (project in file(".")).
     packageDescription := "An easy starting point for a java application with guice.",
 
     bashScriptExtraDefines ++= Seq(
-      """ulimit -c unlimited;
+      """#ulimit -n 99999;
         |if [[ -v JAVA_HOME ]];
         |then
-        |   echo "Will use jre from $JAVA_HOME";
+        |   echo "Will use java from $JAVA_HOME";
         |else
-        |   echo "Will download jre";
-        |   INSTALL_DIR="$(getent passwd $USER | awk -F ':' '{print $6}')/java"
-        |   mkdir -p ${INSTALL_DIR}
-        |   wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u121-b13/jre-8u121-linux-x64.tar.gz -O ${INSTALL_DIR}/jre.tar.gz;
-        |   tar xfvz ${INSTALL_DIR}/jre.tar.gz -C ${INSTALL_DIR};
-        |   ln -s ${INSTALL_DIR}/jre1.8.0_121 ${INSTALL_DIR}/latest_jre
-        |   JAVA_HOME=${INSTALL_DIR}/latest_jre/;
-        |   export JAVA_HOME=$JAVA_HOME;
-        |   grep -q -F "export JAVA_HOME=$JAVA_HOME" $HOME/.profile || echo "export JAVA_HOME=$JAVA_HOME" >> $HOME/.profile;
+        |   echo "Will download java";
+        |
+        |   curl -s "https://get.sdkman.io" | bash;
+        |
+        |   source "$HOME/.sdkman/bin/sdkman-init.sh";
+        |
+        |   sdk install java < /dev/null;
         |fi""".stripMargin
     )
   )
