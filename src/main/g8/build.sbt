@@ -36,7 +36,7 @@ lazy val root = (project in file(".")).
       """#ulimit -n 99999;
         |if [[ -v JAVA_HOME ]];
         |then
-        |   echo "Will use java from $JAVA_HOME";
+        |   echo "Will use java from \$JAVA_HOME";
         |else
         |   echo "Will download java";
         |
@@ -52,7 +52,7 @@ lazy val root = (project in file(".")).
 
 libraryDependencies ++= Seq(
   "software.reinvent" % "commons" % "0.3.2",
-  
+
   "com.beust" % "jcommander" % "1.60",
 
   // CSV
