@@ -3,10 +3,10 @@ Binary Guice Application
 
 # Abstract
 
-An easy starting point for a java application with guice as a [template](https://www.lightbend.com/activator/template/binary-guice-application) which can be used with [Lightbend Activator](https://www.lightbend.com/activator/templates)
+An easy starting point for a java application with guice as a [Giter8](http://www.foundweekends.org/giter8/) template which can be used with [sbt](http://www.scala-sbt.org/).
 
 # Template Usage
-`activator new PROJECTNAME binary-guice-application`
+`sbt new ldaume/java-guice-app.g8 --name=binary-guice-application`
 
 # Build
 

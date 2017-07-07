@@ -6,7 +6,7 @@ import com.typesafe.config.Config;
 
 import software.reinvent.guice.application.app.Application;
 import software.reinvent.guice.application.app.GuiceApplication;
-import software.reinvent.guice.application.provicer.ConfigProvider;
+import software.reinvent.commons.config.ConfigProvider;
 import software.reinvent.log.Slf4jTypeListener;
 
 import static com.google.inject.matcher.Matchers.any;
