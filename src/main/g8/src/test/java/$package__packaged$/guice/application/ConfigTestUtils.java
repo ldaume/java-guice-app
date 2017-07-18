@@ -1,4 +1,4 @@
-package software.reinvent.guice.application;
+package $package$.guice.application;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigObject;

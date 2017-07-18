@@ -1,4 +1,4 @@
-package software.reinvent.guice.application.app;
+package $package$.guice.application.app;
 
 /**
  * Created by lenny on 02.01.17.

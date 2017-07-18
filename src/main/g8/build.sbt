@@ -7,9 +7,9 @@ name := """guice-application"""
 lazy val root = (project in file(".")).
   enablePlugins(JavaAppPackaging, JDKPackagerPlugin).
   settings(
-    organization := "software.reinvent",
+    organization := "$organization$",
     scalaVersion := "2.12.1",
-    version := "0.1.0-SNAPSHOT",
+    version := "$version$",
     jdkPackagerType := "all",
     jdkPackagerToolkit := JavaFXToolkit,
     jdkPackagerJVMArgs := Seq("-Xmx20g", "-Xms1g", "-XX:+UseG1GC", "-Xdiag", "-server", "-Xdoclint:none"),
@@ -23,7 +23,7 @@ lazy val root = (project in file(".")).
       "-J-server"
     ),
 
-    mainClass in Compile := Some("software.reinvent.guice.application.app.AppStarter"),
+    mainClass in Compile := Some("$package$.guice.application.app.AppStarter"),
 
     // This becomes the Start Menu subdirectory for the windows installers.
     maintainer := "RE:invent Software, Leonard Daume",

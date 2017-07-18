@@ -1,4 +1,4 @@
-package software.reinvent.guice.application.utils.bus;
+package $package$.guice.application.utils.bus;
 
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;

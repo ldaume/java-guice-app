@@ -1,4 +1,4 @@
-package software.reinvent.guice.application.app;
+package $package$.guice.application.app;
 
 import com.google.inject.Inject;
 
@@ -17,8 +17,8 @@ import org.slf4j.LoggerFactory;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.Appender;
-import software.reinvent.guice.application.ConfigTestUtils;
-import software.reinvent.guice.application.module.AppModule;
+import $package$.guice.application.ConfigTestUtils;
+import $package$.guice.application.module.AppModule;
 import software.reinvent.log.InjectLogger;
 
 import static org.assertj.core.api.Assertions.assertThat;

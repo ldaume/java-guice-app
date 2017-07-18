@@ -1,4 +1,4 @@
-package software.reinvent.guice.application.app;
+package $package$.guice.application.app;
 
 import com.google.common.base.MoreObjects;
 import com.google.inject.Guice;
@@ -10,7 +10,7 @@ import com.beust.jcommander.ParameterException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import software.reinvent.guice.application.module.AppModule;
+import $package$.guice.application.module.AppModule;
 import software.reinvent.jvm.JvmUtil;
 
 

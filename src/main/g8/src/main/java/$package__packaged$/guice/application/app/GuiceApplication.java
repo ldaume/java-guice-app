@@ -1,4 +1,4 @@
-package software.reinvent.guice.application.app;
+package $package$.guice.application.app;
 
 import com.google.inject.Inject;
 

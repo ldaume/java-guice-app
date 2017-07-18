@@ -1,11 +1,11 @@
-package software.reinvent.guice.application.module;
+package $package$.guice.application.module;
 
 import com.google.inject.AbstractModule;
 
 import com.typesafe.config.Config;
 
-import software.reinvent.guice.application.app.Application;
-import software.reinvent.guice.application.app.GuiceApplication;
+import $package$.guice.application.app.Application;
+import $package$.guice.application.app.GuiceApplication;
 import software.reinvent.commons.config.ConfigProvider;
 import software.reinvent.log.Slf4jTypeListener;
 
