@@ -1,7 +1,7 @@
 import com.typesafe.sbt.SbtNativePackager.autoImport._
 import com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin.autoImport._
 
-name := """guice-application"""
+name := "$name$"
 
 
 lazy val root = (project in file(".")).
