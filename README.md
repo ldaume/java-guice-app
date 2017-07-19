@@ -1,3 +1,7 @@
+| Dependencies UpToDate | License |
+|:---------------------:|:-------:|
+| [![Dependencies UpToDate](https://ci.reinvent-software.de/buildStatus/icon?job=java-guice-app-template-DependencyCheck)](https://ci.reinvent-software.de/job/java-guice-app-template-DependencyCheck) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+
 Binary Guice Application
 ==========
 
