@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).
   enablePlugins(JavaAppPackaging, JDKPackagerPlugin).
   settings(
     organization := "$organization$",
-    scalaVersion := "2.12.1",
+    scalaVersion := "2.12.2",
     version := "$version$",
     jdkPackagerType := "all",
     jdkPackagerToolkit := JavaFXToolkit,
