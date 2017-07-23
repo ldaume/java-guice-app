@@ -71,7 +71,7 @@ libraryDependencies ++= Seq(
   // Commons
   "software.reinvent" % "commons" % "0.3.3",
   "org.zeroturnaround" % "zt-zip" % "1.11",
-  "io.reactivex.rxjava2" % "rxjava" % "2.1.1",
+  "io.reactivex.rxjava2" % "rxjava" % "2.1.2",
 
 
   // TEST
