@@ -55,7 +55,7 @@ libraryDependencies ++= Seq(
   "com.beust" % "jcommander" % "1.72",
 
   // CSV
-  "com.univocity" % "univocity-parsers" % "2.4.1",
+  "com.univocity" % "univocity-parsers" % "2.5.0",
 
   // DB
   // MySQL
