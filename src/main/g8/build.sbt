@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).
   enablePlugins(JavaAppPackaging, JDKPackagerPlugin).
   settings(
     organization := "$organization$",
-    scalaVersion := "2.12.2",
+    scalaVersion := "2.12.3",
     version := "$version$",
     jdkPackagerType := "all",
     jdkPackagerToolkit := JavaFXToolkit,
@@ -55,7 +55,7 @@ libraryDependencies ++= Seq(
   "com.beust" % "jcommander" % "1.72",
 
   // CSV
-  "com.univocity" % "univocity-parsers" % "2.5.0",
+  "com.univocity" % "univocity-parsers" % "2.5.1",
 
   // DB
   // MySQL
@@ -82,7 +82,7 @@ libraryDependencies ++= Seq(
   "info.debatty" % "java-string-similarity" % "0.24" % "test",
   "de.flapdoodle.embed" % "de.flapdoodle.embed.memcached" % "1.06.4" % "test",
   "com.wix" % "wix-embedded-mysql" % "2.4.6" % "test",
-  "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.9" % "test"
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.0" % "test"
 
 )
 
