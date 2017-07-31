@@ -69,7 +69,7 @@ libraryDependencies ++= Seq(
   // "com.googlecode.xmemcached" % "xmemcached" % "2.1.0",
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.3",
+  "software.reinvent" % "commons" % "0.3.4",
   "org.zeroturnaround" % "zt-zip" % "1.11",
   "io.reactivex.rxjava2" % "rxjava" % "2.1.2",
 
