@@ -55,7 +55,7 @@ libraryDependencies ++= Seq(
   "com.beust" % "jcommander" % "1.72",
 
   // CSV
-  "com.univocity" % "univocity-parsers" % "2.5.1",
+  "com.univocity" % "univocity-parsers" % "2.5.2",
 
   // DB
   // MySQL
@@ -69,8 +69,8 @@ libraryDependencies ++= Seq(
   // "com.googlecode.xmemcached" % "xmemcached" % "2.1.0",
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.4",
-  "org.zeroturnaround" % "zt-zip" % "1.11",
+  "software.reinvent" % "commons" % "0.3.5",
+  "org.zeroturnaround" % "zt-zip" % "1.12",
   "io.reactivex.rxjava2" % "rxjava" % "2.1.2",
 
 
