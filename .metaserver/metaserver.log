@@ -69,3 +69,20 @@
 09:53:40.071 INFO  s.m.l.ScalametaLanguageServer - completion
 09:53:42.571 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
 09:53:42.572 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:21
+09:55:55.697 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:55:55.698 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:21
+09:56:46.770 INFO  s.m.l.ScalametaLanguageServer - completion
+09:56:49.270 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:56:49.271 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):42:21
+09:56:49.719 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:56:49.719 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):42:20
+09:56:50.219 INFO  s.m.l.ScalametaLanguageServer - completion
+09:56:52.720 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:56:52.721 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):42:21
+09:56:53.486 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:56:53.486 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):46:37
+09:56:54.169 INFO  s.m.l.ScalametaLanguageServer - completion
+09:56:56.670 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:56:56.670 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):46:38
+09:56:59.847 ERROR l.c.LanguageServer$$anon$1 - Invalid Notification: List((,List(JsonValidationError(List(unknown method textDocument/willSave),WrappedArray())))) - Message: JsonRpcNotificationMessage(textDocument/willSave,ObjectParams({"textDocument":{"uri":"file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt"},"reason":1}))
+09:56:59.853 DEBUG s.m.l.ScalametaLanguageServer - saveTextDocument TextDocumentIdentifier(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)

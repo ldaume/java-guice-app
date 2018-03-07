@@ -34,17 +34,17 @@ lazy val root = (project in file(".")).
 
     bashScriptExtraDefines ++= Seq(
       """#ulimit -n 99999;
-        |if [[ -z ${JAVA_HOME} ]];
+        |if [[ -z "\${JAVA_HOME}" ]];
         |then
         |   echo "Will download java";
         |
         |   curl -s "https://get.sdkman.io" | bash;
         |
-        |   source "$HOME/.sdkman/bin/sdkman-init.sh";
+        |   source "\$HOME/.sdkman/bin/sdkman-init.sh";
         |
         |   sdk install java < /dev/null;
         |else
-        |   echo "Will use java from $JAVA_HOME";
+        |   echo "Will use java from \$JAVA_HOME";
         |fi""".stripMargin
     )
   )
