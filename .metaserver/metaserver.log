@@ -11,3 +11,43 @@
 09:46:38.147 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):20:47
 09:46:38.148 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt)
 09:46:38.149 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):20:47
+09:47:33.080 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt)
+09:47:33.081 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):20:47
+09:49:00.309 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:00.309 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):0:0
+09:49:02.814 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:02.816 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):0:0
+09:49:04.373 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:04.374 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:12
+09:49:10.725 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:10.726 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:20
+09:49:12.565 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:12.566 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:19
+09:49:12.966 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:12.976 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:20
+09:49:13.290 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:13.290 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:21
+09:49:13.890 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:13.891 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:19
+09:49:14.665 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:14.665 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:21
+09:49:16.540 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:16.541 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:30
+09:49:21.764 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:21.765 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:20
+09:49:22.040 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:22.040 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:19
+09:49:23.215 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:23.216 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:20
+09:49:23.489 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:23.490 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:19
+09:49:24.213 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:24.214 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:20
+09:49:24.815 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:24.816 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:19
+09:49:28.719 ERROR l.c.LanguageServer$$anon$1 - Invalid Notification: List((,List(JsonValidationError(List(unknown method textDocument/willSave),WrappedArray())))) - Message: JsonRpcNotificationMessage(textDocument/willSave,ObjectParams({"textDocument":{"uri":"file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt"},"reason":1}))
+09:49:28.729 DEBUG s.m.l.ScalametaLanguageServer - saveTextDocument TextDocumentIdentifier(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:30.145 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:49:30.146 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:30
+09:51:18.358 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt)
+09:51:18.359 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/build.sbt):36:34

@@ -34,7 +34,7 @@ lazy val root = (project in file(".")).
 
     bashScriptExtraDefines ++= Seq(
       """#ulimit -n 99999;
-        |if [[ -z "${JAVA_HOME}" ]];
+        |if [[ -z ${JAVA_HOME} ]];
         |then
         |   echo "Will download java";
         |
