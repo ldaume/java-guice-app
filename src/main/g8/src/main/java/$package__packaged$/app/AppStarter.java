@@ -1,4 +1,4 @@
-package $package$.guice.application.app;
+package $package$.app;
 
 import com.google.common.base.MoreObjects;
 import com.google.inject.Guice;

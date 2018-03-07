@@ -1,4 +1,4 @@
-package $package$.guice.application.app;
+package $package$.app;
 
 /**
  * Created by lenny on 02.01.17.

@@ -1,4 +1,4 @@
-package $package$.guice.application;
+package $package$;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigObject;

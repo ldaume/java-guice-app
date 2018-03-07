@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).
   enablePlugins(JavaAppPackaging, JDKPackagerPlugin).
   settings(
     organization := "$organization$",
-    scalaVersion := "2.12.3",
+    scalaVersion := "2.12.4",
     version := "$version$",
     jdkPackagerType := "all",
     jdkPackagerToolkit := JavaFXToolkit,
@@ -23,7 +23,7 @@ lazy val root = (project in file(".")).
       "-J-server"
     ),
 
-    mainClass in Compile := Some("$package$.guice.application.app.AppStarter"),
+    mainClass in Compile := Some("$package$.app.AppStarter"),
 
     // This becomes the Start Menu subdirectory for the windows installers.
     maintainer := "RE:invent Software, Leonard Daume",
@@ -34,71 +34,17 @@ lazy val root = (project in file(".")).
 
     bashScriptExtraDefines ++= Seq(
       """#ulimit -n 99999;
-        |if [[ -v JAVA_HOME ]];
+        |if [[ -z "${JAVA_HOME}" ]];
         |then
-        |   echo "Will use java from \$JAVA_HOME";
-        |else
         |   echo "Will download java";
         |
         |   curl -s "https://get.sdkman.io" | bash;
         |
-        |   source "\$HOME/.sdkman/bin/sdkman-init.sh";
+        |   source "$HOME/.sdkman/bin/sdkman-init.sh";
         |
         |   sdk install java < /dev/null;
+        |else
+        |   echo "Will use java from $JAVA_HOME";
         |fi""".stripMargin
     )
   )
-
-
-libraryDependencies ++= Seq(
-
-  "com.beust" % "jcommander" % "1.72",
-
-  // CSV
-  "com.univocity" % "univocity-parsers" % "2.5.2",
-
-  // DB
-  // MySQL
-  // "mysql" % "mysql-connector-java" % "5.1.39",
-  // "org.jooq" % "jooq" % "3.8.4",
-  // "or.jooq" % "jooq-meta" % "3.8.4",
-  // "org.jooq" % "jooq-codegen" % "3.8.4",
-  // "com.zaxxer" % "HikariCP" % "2.5.1",
-
-  // Memcached
-  // "com.googlecode.xmemcached" % "xmemcached" % "2.1.0",
-
-  // Commons
-  "software.reinvent" % "commons" % "0.3.5",
-  "org.zeroturnaround" % "zt-zip" % "1.12",
-  "io.reactivex.rxjava2" % "rxjava" % "2.1.3",
-
-
-  // TEST
-  "org.assertj" % "assertj-core" % "3.8.0" % "test",
-  "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
-  "com.novocode" % "junit-interface" % "0.11" % "test->default",
-  "org.jukito" % "jukito" % "1.5" % "test",
-  "info.debatty" % "java-string-similarity" % "0.24" % "test",
-  "de.flapdoodle.embed" % "de.flapdoodle.embed.memcached" % "1.06.4" % "test",
-  "com.wix" % "wix-embedded-mysql" % "2.4.6" % "test",
-  "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.0" % "test"
-
-)
-
-resolvers ++= Seq(
-  Resolver.mavenLocal,
-  "ReInvent Software OSS" at "https://maven.reinvent-software.de/nexus/content/groups/public"
-)
-
-scalacOptions in Test ++= Seq("-Yrangepos")
-//testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
-
-
-dependencyUpdatesFailBuild := true
-
-//publishMavenStyle := true
-
-//crossPaths := false
-
-//autoScalaLibrary := false

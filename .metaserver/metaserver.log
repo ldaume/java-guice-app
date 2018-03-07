@@ -1,0 +1,13 @@
+09:46:35.638 INFO  s.m.l.Main$ - Starting server in /Users/leonarddaume/dev/ws/java-guice-app.g8
+09:46:35.649 INFO  s.m.l.Main$ - Classpath: /Users/leonarddaume/.atom/packages/ide-scala/coursier
+09:46:37.249 INFO  s.m.l.Formatter$ - Classloading scalafmt with 28 downloaded jars
+09:46:37.911 INFO  s.m.l.ScalametaLanguageServer - Initialized with /Users/leonarddaume/dev/ws/java-guice-app.g8, InitializeParams(1600,/Users/leonarddaume/dev/ws/java-guice-app.g8/,ClientCapabilities())
+09:46:38.125 ERROR l.c.LanguageServer$$anon$1 - Invalid Notification: List((,List(JsonValidationError(List(notification parameters must be given),WrappedArray())))) - Message: JsonRpcNotificationMessage(initialized,NoParams)
+09:46:38.142 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt)
+09:46:38.143 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt)
+09:46:38.143 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):0:0
+09:46:38.144 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):21:58
+09:46:38.146 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt)
+09:46:38.147 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):20:47
+09:46:38.148 INFO  s.m.l.p.DocumentHighlightProvider$ - Document highlight in Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt)
+09:46:38.149 INFO  s.m.l.s.InMemorySymbolIndex - resolveName at Uri(file:///Users/leonarddaume/dev/ws/java-guice-app.g8/src/main/g8/dependencies.sbt):20:47

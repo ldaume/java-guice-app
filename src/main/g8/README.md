@@ -1,12 +1,8 @@
-Binary Guice Application
+$name$
 ==========
 
 # Abstract
 
-An easy starting point for a java application with guice as a [Giter8](http://www.foundweekends.org/giter8/) template which can be used with [sbt](http://www.scala-sbt.org/).
-
-# Template Usage
-`sbt new ldaume/java-guice-app.g8`
 
 # Build
 
@@ -14,4 +10,4 @@ An easy starting point for a java application with guice as a [Giter8](http://ww
 
 # Binary Usage
 
-One can get usage information's by executing `bin/guice-aplication`.
+One can get usage information's by executing `bin/$name$`.
